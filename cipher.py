@@ -3,11 +3,11 @@ def caesar_cipher_encrypt(text, shift):
     encrypted_sentence = ""
     for char in text:
         if char.isalpha():
-            base = ord('a') if char.islower() else ord('A')
-            encrypted_char = chr((ord(char) - base + shift) % 26 + base)
+            base = ord('a') 
+            encrypted_char = chr((ord(char.lower()) - base + shift) % 26 + base)
             encrypted_sentence += encrypted_char
         else:
-            encrypted_sentence += char
+            encrypted_sentence += char.lower()
     return encrypted_sentence
 
 def main():
